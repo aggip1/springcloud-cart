@@ -1,0 +1,27 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+spring:
+  application:
+    name: cart
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/springcloud
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+  redis:
+    database: 0
+    port: 7006
+    host: 192.168.80.42
+server:
+  port: 9002
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ag.entity
+
